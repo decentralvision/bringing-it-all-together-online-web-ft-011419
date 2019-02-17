@@ -24,7 +24,7 @@ class Dog
     self
   end
   def self.create(dog_attr)
-    dog = self.new(id:dog_attr[:id], name:dog_attr[:name], breed:dog_attr[:breed])
+    dog = self.new_from_db(dog_attr)
     saved_dog = dog.save
   end
 
