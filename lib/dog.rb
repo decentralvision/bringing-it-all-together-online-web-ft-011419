@@ -26,6 +26,7 @@ class Dog
   def self.create(dog_attr)
     dog = self.new(id:dog_attr[:id], name:dog_attr[:name], breed:dog_attr[:breed])
     saved_dog = dog.save
+    binding.pry
   end
 
   def self.find_by_id(id)
