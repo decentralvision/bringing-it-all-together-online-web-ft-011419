@@ -40,6 +40,8 @@ class Dog
     if !dog.empty?
       dog_data = dog[0]
       dog = Dog.new({:id => row[0], :name => row[1], :breed => row[2]})
+    else
+      dog = self.create(name: name, breed: breed)
   end
 
 end
