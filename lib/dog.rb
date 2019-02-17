@@ -32,6 +32,7 @@ class Dog
     row = DB[:conn].execute("SELECT * FROM dogs WHERE id = ?", id).last
     dog_attr = {:id => row[0], :name => row[1], :breed => row[2]}
     dog = self.create(dog_attr)
+    binding.pry
     dog
   end
 end
