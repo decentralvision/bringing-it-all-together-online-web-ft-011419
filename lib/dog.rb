@@ -34,4 +34,9 @@ class Dog
     dog = Dog.new(dog_attr)
     dog
   end
+
+  def find_or_create_by(name:, breed:)
+
+  end
+
 end
