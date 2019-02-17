@@ -46,8 +46,8 @@ class Dog
     dog
   end
 
-  def self.new_from_db(row)
-
+  def self.new_from_db(dog_attr)
+    self.new(id:dog_attr[:id], name:dog_attr[:name], breed:dog_attr[:breed])
   end
 
 end
