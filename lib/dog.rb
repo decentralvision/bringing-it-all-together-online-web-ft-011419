@@ -29,7 +29,7 @@ class Dog
   end
 
   def self.find_by_id(id)
-    row = DB[:conn].execute("SELECT * FROM dogs WHERE id = ?", id).last
+    row = DB[:conn].execute("SELECT * FROM dogs WHERE id = ?", id)[0]
     dog_attr = {:id => row[0], :name => row[1], :breed => row[2]}
     dog = self.create(dog_attr)
     binding.pry
